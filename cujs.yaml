@@ -1,0 +1,681 @@
+criticalUserJourneys:
+- user: As a newcomer to blockchain development
+  goals:
+  - goal: I want to onramp into the Polkadot ecosystem
+  tasks:
+  - task: I complete the Polkadot blockchain basics tutorial
+  - task: I set up a Polkadot wallet and acquire some DOT for testing
+  - task: I explore the Polkadot ecosystem map to understand available parachains
+  - task: I join Polkadot community channels (Discord, Element, Reddit)
+  - task: I participate in a Polkadot hackathon or workshop
+  - task: I complete the Substrate Developer Academy courses
+  - task: I build a simple dApp on a Polkadot testnet
+  - task: I experiment with cross-chain functionality using testnet tokens
+  - task: I explore Polkadot's governance system by participating in test votes
+  - task: I contribute to an open-source project in the Polkadot ecosystem
+  - task: I attend a Polkadot meetup or conference (virtual or in-person)
+  product: hub
+  level: beginner
+  persona: user
+
+- user: As a non-technical end user
+  goals:
+  - goal: I want to use Polkadot-based apps and manage assets
+  tasks:
+  - task: I install a Polkadot wallet and secure my keys
+  - task: I acquire and transfer DOT to a wallet or app
+  - task: I explore available dApps and choose a service
+  product: hub
+  level: beginner
+  persona: user
+
+- user: As a non-technical end user
+  goals:
+  - goal: I want to explore and understand Polkadot without needing coding knowledge
+  tasks:
+  - task: Set up a wallet and participate in simplified staking
+  - task: Use visual dashboards or wallets to interact with governance proposals
+  - task: Join community-driven outreach programs to learn about parachains and dApps
+  - task: Discover low-risk ways to test Polkadot features, such as playing blockchain-based games
+  - task: Participate in Polkadot educational courses or beginner tutorials for non-developers
+  product: hub
+  level: beginner
+  persona: user
+
+- user: As a non-technical end user
+  goals:
+  - goal: I want to interact with the Polkadot ecosystem efficiently
+  tasks:
+  - task: Use wallet functionality to stake DOT and earn rewards
+  - task: Participate in Polkadot governance by voting on proposals
+  - task: Explore Polkadot-based apps, e.g. related to DeFi or NFTs
+  - task: Use the Polkadot wallet to connect to applications on both the Hub and Cloud ecosystems
+  - task: Track portfolio activity and monitor staking yields via wallet tools
+  - task: Participate in community events to gain deeper insights into wallet and ecosystem updates  
+  product: hub
+  level: beginner
+  persona: user
+
+- user: As a Web3 enthusiast / DOT holder interested in staking
+  goals:
+  - goal: I want to automate token pooling and reward management
+  tasks:
+  - task: Set up an automated system to pool staking rewards
+  - task: Configure a bot to auto-sell staking rewards in real-time
+  - task: Monitor validator percentages to optimize reward strategies
+  product: hub
+  level: advanced
+  persona: user
+
+- user: As a Web3 enthusiast / DOT holder interested in staking
+  goals:
+  - goal: I want to optimize staking and taxation strategies
+  tasks:
+  - task: Set up automated staking re-nominations
+  - task: Configure custom rules for staking and compounding rewards
+  - task: Apply tax logic, such as auto-taxing 42% of USDT rewards
+  product: hub
+  level: advanced
+  persona: user
+
+- user: As a Web3 enthusiast / DOT holder interested in governance
+  goals:
+  - goal: I want to actively participate in Polkadot's governance system
+  tasks:
+  - task: I research Polkadot's on-chain governance mechanisms
+  - task: I learn how to submit, vote on, and discuss proposals
+  - task: I vote on governance proposals and track outcomes
+  - task: I submit my own governance proposal or vote delegation
+  - task: I participate in referendum discussions within the community
+  - task: I explore joining a Polkadot governance group or committee
+  - task: I advocate for improvements in governance processes
+  - task: Set up a governance bot to reject proposals by default
+  - task: Configure exceptions to approve only positive proposals
+  product: hub
+  level: intermediate
+  persona: user
+
+- user: As a Web3 enthusiast / DOT holder interested in staking and/or governance
+  goals:
+  - goal: I want to use nomination pools for voting and staking
+  tasks:
+  - task: Set up a nomination pool for staking rewards
+  - task: Configure voting rights and logic for pool participants
+  - task: Monitor pool performance and update nominations as needed
+  product: hub
+  level: intermediate
+  persona: user
+
+- user: As a Web2 developer transitioning to Web3
+  goals:
+  - goal: I want to deploy an Ethereum-compatible smart contract on Polkadot
+  tasks:
+  - task: I learn about Polkadot's Ethereum compatibility
+  - task: I set up a development environment for Ethereum contracts
+  - task: I write and test my smart contract using Solidity
+  - task: I connect to the Asset Hub parachain
+  - task: I deploy my smart contract to Asset Hub
+  - task: I interact with my deployed contract
+  - task: I integrate my contract with front-end applications
+  - task: I monitor and maintain my smart contract
+  product: hub
+  level: beginner
+  persona: developer
+
+- user: As a recent Polkadot Blockchain Academy (PBA) graduate
+  goals:
+  - goal: I want to build my first dApp on Polkadot
+  tasks:
+  - task: I review the PBA materials related to Polkadot and smart contracts
+  - task: I choose a simple dApp idea to implement
+  - task: I set up a development environment for Solidity
+  - task: I write and test my smart contract
+  - task: I develop a basic front-end interface for my dApp
+  - task: I deploy my smart contract to an Asset Hub testnet
+  - task: I integrate my front-end with the deployed contract
+  - task: I conduct user testing and gather feedback
+  - task: I make necessary improvements based on feedback
+  - task: I prepare for mainnet deployment
+  product: hub
+  level: beginner
+  persona: developer
+
+- user: As a curious Web3 Enthusiast who wants to build something
+  goals:
+  - goal: I want to move from passive Web3 exploration to actively building on Polkadot
+  tasks:
+  - task: Learn the basics of blockchain, Polkadot, and Web3 development
+  - task: Discover what types of applications are possible on Polkadot 
+  - task: Learn to design basic dApps that incorporate governance, tokens, or staking
+  - task: Learn how to raise money with tokens and how Web3 startups get off the ground
+  - task: Set up my developer environment with step-by-step guidance
+  - task: Deploy pre-configured smart contracts or dApps on a Polkadot parachain (a.k.a. rollup)
+  - task: Explore Polkadot's experimentation tools, such as testnets or sandbox environments
+  - task: Share my first dApp with friends or Polkadot's community for feedback
+  - task: Contribute to open-source projects built on Polkadot to improve my skills
+  product: hub
+  level: beginner
+  persona: developer
+
+- user: As a Web3 developer
+  goals:
+  - goal: I want to deploy a custom blockchain (parachain) on Polkadot
+  tasks:
+  - task: I research Polkadot's parachain architecture
+  - task: I set up the Substrate development environment
+  - task: I design and implement my custom blockchain logic
+  - task: I test my parachain locally
+  - task: I prepare for the parachain auction
+  - task: I participate in a parachain slot auction
+  - task: I connect my parachain to the Polkadot Relay Chain
+  - task: I monitor and maintain my parachain
+  product: cloud
+  level: advanced
+  persona: developer
+
+- user: As a Web3 developer
+  goals:
+  - goal: I want to create a bridge between Polkadot and another blockchain
+  tasks:
+  - task: Research Polkadot's bridge technology and see what already exists (e.g., Snowfork, Hyperbrdige)
+  - task: Design the interoperability protocol for the external chain
+  - task: Implement and test the cross-chain bridge
+  - task: Deploy and monitor the bridge in production
+  product: cloud
+  level: advanced
+  persona: developer
+
+- user: As a Web3 developer working with governance
+  goals:
+  - goal: I want to implement voting bots with customizable logic
+  tasks:
+  - task: Design and deploy smart contracts for automated voting
+  - task: Configure voting thresholds and fallback mechanisms
+  - task: Integrate governance outcomes into dApp workflows
+  product: hub
+  level: intermediate
+  persona: developer
+
+- user: As a Web3 developer working with staking
+  goals:
+  - goal: I want to interact with staking indirectly on Polkadot L2s
+  tasks:
+  - task: Leverage proxies to access staking functionality from L2 environments
+  - task: Develop custom logic to enhance staking interactions
+  - task: Monitor and optimize staking workflows
+  product: cloud
+  level: advanced
+  persona: developer
+
+- user: As a Web3 developer focusing on financial applications
+  goals:
+  - goal: I want customizable controls for managing assets securely
+  tasks:
+  - task: Set up a private key management system for assets
+  - task: Define rules for proxy delegation to trusted parties
+  - task: Monitor and review delegated actions
+  product: both
+  level: advanced
+  persona: developer
+
+- user: As a Web3 developer interested in memecoins
+  goals:
+  - goal: I want to create, manage, and distribute memecoins efficiently
+  tasks:
+  - task: Design and deploy a memecoin smart contract
+  - task: Integrate the token with Polkadot wallets
+  - task: Use Polkadot-specific cross-chain interactions
+  product: hub
+  level: intermediate
+  persona: developer
+
+- user: As a Web3 developer with solidity background
+  goals:
+  - goal: I want to leverage my Solidity skills to build dApps on Polkadot
+  tasks:
+  - task: Research Polkadot's support for Ethereum and Substrate compatibility
+  - task: Set up my development environment (Remix, Foundry, ...)
+  - task: Deploy my contract to Polkadot (via Asset Hub)
+  - task: Learn how to view my contract's data (block explorer)
+  - task: Integrate oracles for external data into my contract
+  - task: Deploy my dApp on a different rollup (Cloud V2) for scalability
+  - task: Test interchain messaging functionality between Polkadot and Ethereum networks
+  - task: Join Polkadot developer communities for peer learning, feedback or bug reports
+  product: hub
+  level: intermediate
+  persona: developer  
+
+- user: As a Web2 developer new to blockchain but not Solidity-focused
+  goals:
+  - goal: I want to start building in the Polkadot ecosystem without Solidity
+  tasks:
+  - task: I learn Substrate's Rust-based framework
+  - task: I explore alternatives like ink! for smart contracts
+  - task: I find community resources and mentorship
+  - task: I create and deploy a simple Rust-based dApp
+  product: hub
+  level: beginner
+  persona: developer
+
+- user: As a tech decision maker
+  goals:
+  - goal: I want to adopt Polkadot's Cloud for our company's blockchain-based speed and scalability needs
+  tasks:
+  - task: Understand how rollups (e.g., Cloud V2 EVM-based solutions) could add scalability
+  - task: Review official Polkadot benchmarks and status pages and compare with my use case requirements
+  - task: Assess computing and throughput optimizations for our business model
+  - task: Evaluate low-latency data availability solutions such as Thrum
+  - task: Stress-test decentralized computation using JAM and Lambda services
+  - task: Build Proof of Concept (PoC) applications to validate their efficiency in Cloud solutions
+  - task: Review case studies and white papers for Polkadot enterprise use cases
+  product: cloud
+  level: advanced
+  persona: developer  
+
+- user: As a Web3 dev moving from other ecosystems (e.g., Ethereum)
+  goals:
+  - goal: I want to leverage my existing Web3 experience to build on Polkadot
+  tasks:
+  - task: Learn specific differences between Ethereum and Polkadot (e.g., Substrate, parachains, NPoS)
+  - task: Stop taking risks on Ethereum (e.g., by waiting 7 days for large txs finality) and find a low-finality platform
+  - task: Set up and use Polkadot's Ethereum-compatible rollups (Cloud V2) or smart contracts
+  - task: Experiment with cross-chain functionality using Ethereum-Polkadot bridges (e.g., Snowbridge)
+  - task: Build a simple multi-chain dApp and test cross-chain messaging
+  - task: Understand how to use identity and individuality APIs for secure onboarding and user authentication
+  - task: Participate in developer AMAs, forums, or hackathons focused on Polkadot migration
+  product: both
+  level: advanced
+  persona: developer  
+
+- user: As a smart-contract developer with no Solidity background
+  goals:
+  - goal: I want to quickly get started building smart contracts on Polkadot without prior blockchain experience
+  tasks:
+  - task: Follow a beginner-friendly tutorial to understand Polkadot's Hub and Cloud architecture
+  - task: Learn the basics of Web3 concepts (decentralization, wallets, dApps)
+  - task: Use a no-code or low-code toolkit or templates to deploy a simple Polkadot smart contract
+  - task: Access pre-built templates for common use cases (token contracts, staking)
+  - task: Test my first smart contract in a Polkadot test environment with guided support
+  - task: Access developer FAQs and troubleshoot common scenarios in a knowledge base
+  - task: Identify further resources to specialize (PBA, workshops)
+  product: hub
+  level: beginner
+  persona: developer  
+
+- user: As a dApp Developer
+  goals:
+  - goal: I want to efficiently build and scale my dApp on Polkadot
+  tasks:
+  - task: Evaluate whether to deploy my dApp on the Hub or the Cloud
+  - task: Find and use create-polkadot-dapp to get started quickly 
+  - task: Add wallet support for my users
+  - task: Acquire DOT to deploy and test applications on Polkadot
+  - task: Enable multi-chain functionality via interoperability tools (e.g., Snowbridge)
+  - task: Launch pilot dApp to attract users and collect feedback from the Polkadot user base
+  - task: Advertise and talk about my project
+  - task: Get funding for my project (DF, treasury, grant, ...)
+  product: both
+  level: intermediate
+  persona: developer  
+
+- user: As a blockchain project leader
+  goals:
+  - goal: I want to evaluate whether to build on Polkadot or another blockchain
+  tasks:
+  - task: I research Polkadot's architecture and unique features
+  - task: I compare Polkadot's stability, scalability and interoperability with other blockchains
+  - task: I analyze the cost of development and deployment on different platforms
+  - task: I evaluate the developer tools and resources available for each blockchain
+  - task: I assess the community support and ecosystem growth of each platform
+  - task: I compare the governance models and upgrade processes
+  - task: I analyze the token economics and incentive structures
+  - task: I evaluate the security models and track records of each blockchain
+  - task: I consider the regulatory implications of each platform
+  - task: I create a pros and cons list for each blockchain option
+  - task: I consult with my team and stakeholders on the findings
+  - task: I make a final decision based on our project's specific needs and goals
+  product: both
+  level: advanced
+  persona: developer  
+
+- user: As an existing Parachain Builder
+  goals:
+  - goal: I want to transition my existing project toward Cloud features for more scalability
+  tasks:
+  - task: Explore the differences between the Hub and the Cloud roles in the Polkadot ecosystem
+  - task: Research how to get more performance for my Polkadot rollup (e.g. through waiting / early testing of JAM)
+  - task: Use Snowbridge for scalable cross-chain interoperability
+  - task: Understand the future roadmap and how JAM can impact my business
+  - task: Learn how to integrate Coretime trading to optimize parachain costs
+  - task: Join a support group or technical forum for advanced Polkadot builders
+  - task: Know where to reach out for help and support
+  product: cloud
+  level: advanced
+  persona: developer  
+
+- user: As an existing Parachain Builder
+  goals:
+  - goal: I want to migrate my parachain to a smart contract on the Hub
+  tasks:
+  - task: I evaluate the benefits and trade-offs of moving to a smart contract
+  - task: I analyze my current parachain functionality
+  - task: I design an equivalent smart contract architecture
+  - task: I learn Solidity or ink! for smart contract development
+  - task: I port my parachain logic to smart contract code
+  - task: I deploy and test my smart contract on Asset Hub testnet
+  - task: I plan and execute the migration of data and users
+  - task: I deploy the final version on mainnet (via Asset Hub)
+  - task: I deprecate my original parachain
+  product: hub
+  level: advanced
+  persona: developer
+
+- user: As an existing Parachain Builder
+  goals:
+  - goal: I want to migrate my project from Kusama to Polkadot
+  tasks:
+  - task: I evaluate the success and learnings from our Kusama deployment
+  - task: I research the differences between Kusama and Polkadot environments
+  - task: I update our project's codebase to align with Polkadot's specifications
+  - task: I review and adjust our tokenomics model for the Polkadot ecosystem
+  - task: I plan for data migration, if applicable
+  - task: I develop a migration strategy for existing users and assets
+  - task: I conduct thorough testing on Polkadot's testnet
+  - task: I audit the security of our Polkadot implementation
+  - task: I prepare documentation for users about the migration process
+  - task: I engage with the Polkadot community to build awareness
+  - task: I execute the migration process and monitor for any issues
+  - task: I provide post-migration support to users
+  - task: I analyze performance on Polkadot and make necessary optimizations
+  product: both
+  level: advanced
+  persona: developer 
+
+- user: As a Polkadot developer
+  goals:
+  - goal: I want to get help resolving a bug in my project
+  tasks:
+  - task: I document the bug thoroughly with steps to reproduce
+  - task: I check the official Polkadot documentation for relevant information
+  - task: I search for similar issues in Polkadot GitHub repositories
+  - task: I post a question on the Polkadot StackExchange
+  - task: I join the Polkadot Discord server and ask in the appropriate channel
+  - task: I reach out to the Polkadot community on Element (Matrix)
+  - task: I consider posting a bounty for bug resolution if it's a complex issue
+  - task: I implement and test the solution once found
+  - task: I share the resolution with the community to help others
+  product: both
+  level: advanced
+  persona: developer  
+
+- user: As a freelance developer
+  goals:
+  - goal: I want to find work opportunities within the Polkadot ecosystem
+  tasks:
+  - task: I join Polkadot's freelance job boards and communities
+  - task: I showcase my Polkadot-related projects on GitHub
+  - task: I learn Polkadot-specific technologies to enhance my skill set
+  - task: I bid on RFPs and bounties in the Polkadot ecosystem
+  - task: I network with Polkadot parachain teams for collaboration
+  - task: I contribute to open-source Polkadot projects for visibility
+  - task: I deliver high-quality work to build a strong reputation
+  product: both
+  level: intermediate
+  persona: developer  
+
+- user: As a Business Decision Maker - Startup
+  goals:
+  - goal: I want to evaluate the Polkadot ecosystem for my business
+  tasks:
+  - task: Understand the costs and benefits of deploying on Polkadot's Hub vs. Cloud
+  - task: Investigate the role of Coretime trading for operational efficiency
+  - task: Assess how Polkadot identities or governance can be useful or leveraged for my business (incentivization, etc)
+  - task: Plan the deployment of smart contracts with a focus on Sybil resistance and security
+  - task: Explore Polkadot's cross-chain ecosystem to create interoperable products
+  - task: Meet Polkadot ecosystem players to forge partnerships or collaborations
+  - task: Build a roadmap for scaling business operations on parachains
+  product: both
+  level: intermediate
+  persona: business
+
+- user: As a Business Decision Maker - Startup
+  goals:
+  - goal: I want semi-automated co-funding solutions for my project
+  tasks:
+  - task: Develop and deploy co-funding smart contracts
+  - task: Integrate semi-automated features to collect funding milestones
+  - task: Monitor contributions and trigger fund disbursements
+  product: both
+  level: advanced
+  persona: business
+
+- user: As a Tech Decision Maker - Enterprise
+  goals:
+  - goal: I want to leverage Polkadot's Cloud for my enterprise's high-throughput needs
+  tasks:
+  - task: Evaluate the suitability of Polkadot rollups or Ethereum L2 rollups for enterprise applications (stability, reliability, etc.)
+  - task: Assess transaction cost reduction using Polkadot's computational and DA tools
+  - task: Develop an initial proof of concept (PoC) with a Polkadot rollup solution
+  - task: Ensure robustness by stress-testing workloads on Polkadot Cloud
+  - task: Expand data storage capabilities through decentralized DA services like Thrum
+  - task: Set up internal tools for monitoring and troubleshooting Polkadot deployments
+  - task: Find service provider / partner that can make my life easier
+  product: cloud
+  level: advanced
+  persona: business  
+
+- user: As an entrepreneur
+  goals:
+  - goal: I want to launch a startup with my own token on Polkadot
+  tasks:
+  - task: I research Polkadot's token standards and best practices
+  - task: I design my token economics and utility
+  - task: I choose between creating a parachain or using Polkadot Hub for token deployment
+  - task: I deploy my solution (Hub or Cloud)
+  - task: I set up a wallet for token management
+  - task: I prepare marketing materials and a whitepaper
+  - task: I engage with the Polkadot community to build interest
+  - task: I implement a governance structure for token holders
+  product: both
+  level: intermediate
+  persona: business  
+
+- user: As an enterprise looking to build stablecoins or payment solutions
+  goals:
+  - goal: I want to use Polkadot's Cloud platform to launch stablecoin or payment systems
+  tasks:
+  - task: Understand how to leverage Polkadot's high-throughput rollups for payment processing
+  - task: Evaluate interoperability options to integrate stablecoins with other blockchains
+  - task: Explore identity verification tools to streamline user onboarding
+  - task: Test decentralized accountability features via governance or staking models
+  - task: Expand into international markets using Polkadot's interoperability and scalability
+  - task: Monitor community feedback for new stablecoin or payment innovations
+  product: cloud
+  level: advanced
+  persona: business  
+
+- user: As a professional investor considering Polkadot
+  goals:
+  - goal: I want to evaluate the potential ROI of the Polkadot ecosystem
+  tasks:
+  - task: Conduct research into DOT tokenomics (staking, inflation, and governance rewards)
+  - task: Analyze potential adoption rates for Polkadot's Hub and Cloud features
+  - task: Track ecosystem growth indicators, including developer participation and dApp adoption
+  - task: Use Polkadot analytics tools to monitor staking yields and network health
+  - task: Understand Polkadot's long term roadmap
+  - task: I evaluate the success of existing parachains
+  - task: I connect with Polkadot's business development team
+  - task: I explore pilot projects or co-marketing opportunities
+  - task: Join investor groups and forums to share insights and gain community perspectives
+  - task: Diversify investments by exploring multiple parachains for unique use cases
+  product: cloud
+  level: advanced
+  persona: user
+
+- user: As a traditional finance professional
+  goals:
+  - goal: I want to explore how Polkadot can be used for tokenizing real-world assets
+  tasks:
+  - task: I research Polkadot's capabilities for asset tokenization
+  - task: I study successful tokenization projects on other blockchains
+  - task: I identify potential real-world assets suitable for tokenization
+  - task: I analyze the regulatory landscape for asset tokenization
+  - task: I explore Polkadot parachains specializing in tokenized assets
+  - task: I design a tokenization model suitable for my chosen asset
+  - task: I consult with legal experts on compliance requirements
+  - task: I develop a proof-of-concept for asset tokenization on a Polkadot testnet
+  - task: I create a business plan for implementing asset tokenization
+  - task: I engage with potential partners in the Polkadot ecosystem
+  - task: I present the tokenization project to stakeholders for approval
+  product: cloud
+  level: intermediate
+  persona: user
+
+- user: As a Low Margin Business
+  goals:
+  - goal: I want to leverage affordable, scalable solutions on Polkadot
+  tasks:
+  - task: Evaluate Cloud V1 and V2 offerings (parachains vs. rollups) for low-cost deployment
+  - task: Explore how Polkadot's computational and data availability tools can reduce costs
+  - task: Implement payment solutions using stablecoins enabled by Polkadot
+  - task: Plan a minimal viable product (MVP) based on Polkadot's cost-efficient services
+  - task: Validate scalability by running stress tests on a low-margin rollup
+  - task: Build automated workflows using Polkadot's JAM services and Lambda features
+  product: cloud
+  level: advanced
+  persona: business
+
+- user: As a Web3 gamer
+  goals:
+  - goal: I want to integrate Polkadot's blockchain technology into my game
+  tasks:
+  - task: I research Polkadot's gaming integrations and use cases
+  - task: I explore Polkadot's NFT standards and gaming assets
+  - task: I design a game economy leveraging blockchain features
+  - task: I integrate blockchain-based rewards and assets into my game
+  - task: I enable cross-chain asset transfers for in-game items
+  - task: I test and deploy the game with blockchain features on Polkadot testnets
+  - task: I build a community around my blockchain-based game
+  - task: I integrate Polkadot wallets for in-game transactions
+  - task: I conduct playtesting with blockchain features enabled
+  - task: I optimize gas fees and transaction speeds for seamless gameplay
+  product: both
+  level: advanced
+  persona: business
+
+- user: As a central bank digital currency (CBDC) researcher
+  goals:
+  - goal: I want to prototype a CBDC system using Polkadot's technology
+  tasks:
+  - task: I study Polkadot's capabilities for creating a controlled, scalable currency system
+  - task: I design the architecture for a CBDC that balances privacy and regulatory requirements
+  - task: I develop smart contracts for CBDC issuance, transfer, and redemption
+  - task: I implement advanced privacy features using zero-knowledge proofs
+  - task: I create a permissioned network structure for authorized financial institutions
+  - task: I design a scalable transaction processing system capable of handling national volumes
+  - task: I develop interfaces for integration with existing banking systems
+  - task: I implement programmable money features for conditional transfers and automated payments
+  - task: I create a simulation environment for economic modeling and testing
+  - task: I develop tools for monetary policy implementation and analysis
+  - task: I conduct extensive security audits and stress tests
+  - task: I prepare a comprehensive report on the prototype's performance and potential
+  product: cloud
+  level: advanced
+  persona: business
+
+- user: As an AI developer
+  goals:
+  - goal: I want to use Polkadot for decentralized inference
+  tasks:
+  - task: Design a mechanism to request and fulfill AI inference jobs
+  - task: Integrate Polkadot state channels or XCMP for P2P transactions
+  - task: Develop smart contracts for job assignments and payments
+  - task: Optimize operations for home-GPU or decentralized compute
+  product: cloud
+  level: advanced
+  persona: developer
+
+- user: As a Web3 infrastructure provider
+  goals:
+  - goal: I want to integrate Polkadot support into my services
+  tasks:
+  - task: I study Polkadot's network architecture and parachain system
+  - task: I analyze the requirements for running Polkadot nodes
+  - task: I set up and synchronize a Polkadot Relay Chain node
+  - task: I implement support for Polkadot's transaction formats
+  - task: I add Polkadot address generation and validation to my service
+  - task: I integrate with Polkadot's RPC methods for data retrieval
+  - task: I implement support for parachain interactions
+  - task: I set up monitoring and alerting for Polkadot-specific metrics
+  - task: I create documentation for users on how to use Polkadot features
+  - task: I conduct thorough testing of all Polkadot integrations
+  - task: I launch a beta version of Polkadot support for early adopters
+  - task: I gather feedback and iterate on the implementation
+  product: both
+  level: advanced
+  persona: business
+
+- user: As an educator
+  goals:
+  - goal: I want to teach blockchain development using Polkadot
+  tasks:
+  - task: I learn Polkadot's development tools and resources
+  - task: I create beginner-friendly tutorials and workshops
+  - task: I design a curriculum incorporating Substrate and Solidity
+  - task: I conduct live coding sessions and Q&A forums
+  - task: I host hackathons focused on building on Polkadot
+  - task: I publish educational content on Polkadot's unique features
+  - task: I engage with the Polkadot community to refine teaching materials
+  product: both
+  level: advanced
+  persona: user
+
+- user: As a security auditor or researcher
+  goals:
+  - goal: I want to perform a security audit on Polkadot-based applications
+  tasks:
+  - task: I review Polkadot's security documentation
+  - task: I evaluate the application's architecture for vulnerabilities
+  - task: I test for known exploits in smart contracts
+  - task: I provide a detailed report of vulnerabilities and recommendations
+  - task: I participate in bounties 
+  product: both
+  level: advanced
+  persona: developer
+
+- user: As an aspiring Polkadot validator or parachain collator
+  goals:
+  - goal: I want to become a validator or collator
+  tasks:
+  - task: Research the hardware and software requirements for running a validator node
+  - task: I set up the necessary hardware and environment
+  - task: I install and configure the Polkadot client
+  - task: I secure enough DOT to meet the staking requirements
+  - task: I join the network as a validator/collator
+  - task: I monitor my node for performance and security
+  - task: I participate in staking rewards and governance
+  - task: Troubleshoot issues and communicate with the community
+  product: both
+  level: advanced
+  persona: business
+
+- user: As an Ecosystem Tool Developer
+  goals:
+  - goal: I want to create a supporting tool (e.g., block explorer, wallet, or analytics platform) for the Polkadot ecosystem
+  tasks:
+  - task: I identify a gap in the current ecosystem tooling
+  - task: I research Polkadot's architecture and APIs
+  - task: I design the architecture for my tool
+  - task: I develop a prototype of the tool
+  - task: I implement data collection and processing from Polkadot nodes
+  - task: I create a user-friendly interface for the tool
+  - task: I conduct thorough testing, including edge cases and high load scenarios
+  - task: I implement security best practices and conduct an audit
+  - task: I deploy the tool and set up monitoring systems
+  - task: I create documentation for users and other developers
+  - task: I engage with the Polkadot community to gather feedback
+  - task: I continuously update and improve the tool based on user needs and Polkadot upgrades
+  - task: I get funding for my tool
+  product: both
+  level: advanced
+  persona: business

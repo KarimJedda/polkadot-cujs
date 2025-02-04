@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Critical User Journeys</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #60a5fa;
+            --background-color: #f8fafc;
+            --text-color: #1e293b;
+            --journey-colors: #2563eb, #0891b2, #4f46e5, #7c3aed;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.5;
+        }
+
+        .journeys-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .journey-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .journey-title {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .journey-subtitle {
+            font-size: 1.2em;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+
+        .journey-section {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 32px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .journey-user {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+        }
+
+        .journey-metadata {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .metadata-item {
+            background: var(--background-color);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            color: var(--text-color);
+        }
+
+        .metadata-label {
+            font-weight: 600;
+            margin-right: 6px;
+        }
+
+        .goal-section {
+            margin-bottom: 24px;
+            padding: 16px;
+            background: var(--background-color);
+            border-radius: 8px;
+        }
+
+        .goal-header {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 16px;
+        }
+
+        .journey-flow {
+            padding-left: 24px;
+        }
+
+        .journey-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .journey-step.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .step-number {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .metrics-indicator {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            flex-shrink: 0;
+            transition: all 0.2s ease;
+        }
+
+        .metrics-indicator[data-status="unknown"] {
+            background-color: #e5e7eb;
+            color: #6b7280;
+        }
+
+        .metrics-indicator[data-status="success"] {
+            background-color: #86efac;
+            color: #166534;
+        }
+
+        .metrics-indicator[data-status="warning"] {
+            background-color: #fde047;
+            color: #854d0e;
+        }
+
+        .metrics-indicator[data-status="error"] {
+            background-color: #fca5a5;
+            color: #991b1b;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.2em;
+            color: var(--text-color);
+        }
+
+        /* Filter Styles */
+        .filters-container {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 32px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .filters-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 16px;
+        }
+
+        .filters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .filter-label {
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 4px;
+        }
+
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .filter-option {
+            padding: 6px 12px;
+            border-radius: 6px;
+            background: var(--background-color);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+        }
+
+        .filter-option:hover {
+            background: #e2e8f0;
+        }
+
+        .filter-option.selected {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .journey-section.filtered {
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="journeys-container">
+        <div class="journey-header">
+            <h1 class="journey-title">Polkadot Critical User Journeys</h1>
+            <p class="journey-subtitle">Explore user journeys across the Polkadot ecosystem</p>
+        </div>
+
+        <div class="filters-container">
+            <div class="filters-title">Filter Journeys</div>
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <div class="filter-label">Product</div>
+                    <div class="filter-options" data-filter="product">
+                        <div class="filter-option" data-value="all">All</div>
+                        <div class="filter-option" data-value="hub">Hub</div>
+                        <div class="filter-option" data-value="cloud">Cloud</div>
+                        <div class="filter-option" data-value="both">Both</div>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <div class="filter-label">Level</div>
+                    <div class="filter-options" data-filter="level">
+                        <div class="filter-option" data-value="all">All</div>
+                        <div class="filter-option" data-value="beginner">Beginner</div>
+                        <div class="filter-option" data-value="intermediate">Intermediate</div>
+                        <div class="filter-option" data-value="advanced">Advanced</div>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <div class="filter-label">Persona</div>
+                    <div class="filter-options" data-filter="persona">
+                        <div class="filter-option" data-value="all">All</div>
+                        <div class="filter-option" data-value="developer">Developer</div>
+                        <div class="filter-option" data-value="business">Business</div>
+                        <div class="filter-option" data-value="user">User</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="journeysGrid">
+            <div class="loading">Loading journeys...</div>
+        </div>
+    </div>
+
+    <script>
+        const filters = {
+            product: 'all',
+            level: 'all',
+            persona: 'all'
+        };
+
+        async function loadJourneyData() {
+            try {
+                const response = await fetch('cujs.yaml');
+                const yamlText = await response.text();
+                const data = jsyaml.load(yamlText);
+                return data.criticalUserJourneys;
+            } catch (error) {
+                console.error('Error loading journey data:', error);
+                document.getElementById('journeysGrid').innerHTML = 
+                    '<div class="loading" style="color: #dc2626;">Error loading journeys. Please check the console for details.</div>';
+                throw error;
+            }
+        }
+
+        function createJourneyColumns(journeyData) {
+            const container = document.getElementById('journeysGrid');
+            container.innerHTML = ''; // Clear loading message
+            
+            journeyData.forEach((journey, journeyIndex) => {
+                const section = document.createElement('div');
+                section.className = 'journey-section';
+                section.setAttribute('data-product', journey.product);
+                section.setAttribute('data-level', journey.level);
+                section.setAttribute('data-persona', journey.persona);
+                
+                const userHeader = document.createElement('div');
+                userHeader.className = 'journey-user';
+                userHeader.textContent = journey.user;
+                section.appendChild(userHeader);
+                
+                const metadata = document.createElement('div');
+                metadata.className = 'journey-metadata';
+                
+                const metadataItems = [
+                    { label: 'Product', value: journey.product },
+                    { label: 'Level', value: journey.level },
+                    { label: 'Persona', value: journey.persona }
+                ];
+                
+                metadataItems.forEach(item => {
+                    const metadataItem = document.createElement('div');
+                    metadataItem.className = 'metadata-item';
+                    metadataItem.innerHTML = `<span class="metadata-label">${item.label}:</span>${item.value}`;
+                    metadata.appendChild(metadataItem);
+                });
+                
+                section.appendChild(metadata);
+                
+                // Goals and their tasks
+                journey.goals.forEach((goalData, goalIndex) => {
+                    const goalSection = document.createElement('div');
+                    goalSection.className = 'goal-section';
+                    
+                    const goalHeader = document.createElement('div');
+                    goalHeader.className = 'goal-header';
+                    goalHeader.textContent = goalData.goal;
+                    goalSection.appendChild(goalHeader);
+                    
+                    // Create flow for tasks under this goal
+                    const flow = document.createElement('div');
+                    flow.className = 'journey-flow';
+                    
+                    // Find tasks associated with this goal index
+                    const tasksForGoal = journey.tasks;
+                    
+                    tasksForGoal.forEach((taskData, taskIndex) => {
+                        const step = document.createElement('div');
+                        step.className = 'journey-step';
+                        
+                        const stepNumber = document.createElement('div');
+                        stepNumber.className = 'step-number';
+                        stepNumber.style.backgroundColor = `var(--primary-color)`;
+                        stepNumber.textContent = taskIndex + 1;
+                        
+                        const metrics = document.createElement('div');
+                        metrics.className = 'metrics-indicator';
+                        metrics.setAttribute('data-status', 'unknown');
+                        metrics.textContent = '?';
+                        metrics.onclick = () => cycleMetricStatus(metrics);
+                        
+                        step.appendChild(stepNumber);
+                        step.appendChild(metrics);
+                        step.appendChild(document.createTextNode(taskData.task));
+                        flow.appendChild(step);
+                        
+                        setTimeout(() => {
+                            step.classList.add('visible');
+                        }, taskIndex * 100);
+                    });
+                    
+                    goalSection.appendChild(flow);
+                    section.appendChild(goalSection);
+                });
+                
+                container.appendChild(section);
+            });
+        }
+
+        function cycleMetricStatus(element) {
+            const statuses = ['unknown', 'success', 'warning', 'error'];
+            const icons = {'unknown': '?', 'success': '✓', 'warning': '!', 'error': '×'};
+            const currentStatus = element.getAttribute('data-status');
+            const currentIndex = statuses.indexOf(currentStatus);
+            const nextIndex = (currentIndex + 1) % statuses.length;
+            const nextStatus = statuses[nextIndex];
+            
+            element.setAttribute('data-status', nextStatus);
+            element.textContent = icons[nextStatus];
+        }
+
+        function applyFilters() {
+            const sections = document.querySelectorAll('.journey-section');
+            sections.forEach(section => {
+                const product = section.getAttribute('data-product');
+                const level = section.getAttribute('data-level');
+                const persona = section.getAttribute('data-persona');
+
+                const productMatch = filters.product === 'all' || filters.product === product;
+                const levelMatch = filters.level === 'all' || filters.level === level;
+                const personaMatch = filters.persona === 'all' || filters.persona === persona;
+
+                if (productMatch && levelMatch && personaMatch) {
+                    section.classList.remove('filtered');
+                } else {
+                    section.classList.add('filtered');
+                }
+            });
+        }
+
+        function initializeFilters() {
+            document.querySelectorAll('.filter-options').forEach(filterGroup => {
+                const filterType = filterGroup.getAttribute('data-filter');
+                filterGroup.querySelectorAll('.filter-option').forEach(option => {
+                    option.addEventListener('click', () => {
+                        // Remove selected class from all options in this group
+                        filterGroup.querySelectorAll('.filter-option').forEach(opt => {
+                            opt.classList.remove('selected');
+                        });
+                        
+                        // Add selected class to clicked option
+                        option.classList.add('selected');
+                        
+                        // Update filter state
+                        filters[filterType] = option.getAttribute('data-value');
+                        
+                        // Apply filters
+                        applyFilters();
+                    });
+                });
+
+                // Select 'All' option by default
+                filterGroup.querySelector('[data-value="all"]').classList.add('selected');
+            });
+        }
+
+        // Initialize the visualization
+        document.addEventListener('DOMContentLoaded', () => {
+            loadJourneyData()
+                .then(createJourneyColumns)
+                .then(() => {
+                    initializeFilters();
+                    applyFilters();
+                })
+                .catch(error => console.error('Failed to initialize journeys:', error));
+        });
+    </script>
+</body>
+</html>
+
